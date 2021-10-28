@@ -12,20 +12,11 @@
 
 
 /*Pc grids*/
-#grid-container {
-    width: 100%;
-    display: grid;
-
-    grid-template-areas:
-        'headerTag  headerTag   headerTag'
-        'navTag     navTag      navTag'
-        'videoTag   videoTag    videoTag'
-        'stelvioTag stelvioTag  asideTag'
-        'oostenrijkTag oostenrijkTag  asideTag'
-        'duitslandTag duitslandTag  asideTag'
-        'footerTag  footerTag   cookieTag';
-}    
-
+.flexbox{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 #grid-container-best {
             width: 100%;
             display: grid;
@@ -176,18 +167,48 @@ a {
     body{
         font-family: Arial, Helvetica, sans-serif;
     }
+
+
+    #Homeheader{
+        background-color: #5ccc00;
+        flex-basis: 100%;
+        flex-grow: 1;
+        flex-shrink: 1; 
+        order: 2;   
+    } 
+    nav {
+        background-color: #22cc00;
+        grid-area: navTag;
+        flex-basis: 100%;
+        flex-grow: 1;
+        flex-shrink: 1;
+        order: 3; 
+    } 
     #asideHome {
-        background-color: #ff0000;
-        width: 30em;
-        padding: 50px;
-        float: left;
-        grid-area: asideTag;
-    }    
+        background-color: #ff0000;              
+        padding: 50px;       
+        grid-area: asideTag;       
+        flex-basis: auto;
+        flex-grow: 1;
+        flex-shrink: 1; 
+        flex-wrap: wrap;  
+        order: 5;
+        height: 100px;              
+    }
+    article {
+        padding: 30px; 
+        flex-basis: 58%;       
+        flex-wrap: nowrap;        
+    }      
     #footer {
         background-color: #ff9204;
         grid-area: footerTag;
-        font-family: 'Notable', sans-serif;       
-    }    
+        font-family: 'Notable', sans-serif; 
+        flex-basis: 100%;
+        flex-grow: 1;
+        flex-shrink: 1; 
+        order: 8;     
+    } 
     #cookieStatement {
         background-color: #003cff;
         grid-area: cookieTag;
@@ -197,24 +218,26 @@ a {
         width: 8vw;
         color: rgb(14, 0, 0);
         opacity: 50%;
+        flex-basis: 100%;
+        flex-grow: 1;
+        flex-shrink: 1; 
     }    
     #logo {
         width: 100px;
+        flex-basis: 100%;
+        flex-grow: 1;
+        flex-shrink: 1;
+        order: 1; 
     }    
-    article {
-        padding: 30px;
-    }  
-    #Homeheader{
-      background-color: #5ccc00;    
-    }  
-    nav {
-      background-color: #22cc00;
-      grid-area: navTag;
-    }  
     #video {
-      background-color: #ad48ff;
-      grid-area: videoTag;
+        background-color: #ad48ff;
+        grid-area: videoTag;
+        flex-basis: 100%;
+        flex-grow: 1;
+        flex-shrink: 1;
+        order: 4; 
     }
+    
     .selectednav{
     background-color: #2bff00;
     }   
@@ -226,7 +249,7 @@ a {
     .articletext {
     width: 50%;
     }
-    .articlefoto {
+    .articlefoto {    
     width: 400px;
     float: right;
     clear: both;
@@ -236,17 +259,22 @@ a {
     #articlestelvio {
     background-color: #abe95b;
     grid-area: stelvioTag;
-    height: 250px;
+    height: 250px; 
+    order: 5; 
+    display: inline-flex; 
+    flex-direction: column; 
     }
     #articleOostenrijk {
     background-color: #8381ff;
     grid-area: oostenrijkTag;
     height: 300px;
+    order: 6; 
     }
     #articleDuitsland {
     background-color: #ff7cd8;
     grid-area: duitslandTag;
     height: 250px;
+    order: 7;
     }        
     figure>figcaption {
     float: right;
@@ -434,7 +462,12 @@ fieldset{
 
 /*tablet media*/
 @media screen and (min-width: 481px) and (max-width: 1179px) {
-
+    .flexbox{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 /* Coockie message */
 .coockiemessage {
     z-index: 999;
@@ -507,15 +540,37 @@ a {
     }
     #asideHome {
         background-color: #ff0000;
-        width: 30em;
-        padding: 50px;
-        float: left;
+        flex-basis: 100%;
+        padding: 50px;        
         grid-area: asideTag;
+        order: 5;
     }    
     #footer {
         background-color: #ff9204;
         grid-area: footerTag;
+        order: 9;
+    } 
+    #logo {
+        width: 100px;
+        order: 1;
     }    
+    article {
+        padding: 30px;
+    }
+    #Homeheader{
+      background-color: #5ccc00;
+      order: 2;    
+    }  
+    nav {
+      background-color: #22cc00;
+      grid-area: navTag;
+      order: 3;
+    }  
+    #video {
+      background-color: #ad48ff;
+      grid-area: videoTag;
+      order: 4;
+    }   
     #cookieStatement {
         background-color: #ff6600;
         grid-area: cookieTag;
@@ -526,23 +581,7 @@ a {
         color: #fff;
         opacity: 50%;
     }    
-    #logo {
-        width: 100px;
-    }    
-    article {
-        padding: 30px;
-    }
-    #Homeheader{
-      background-color: #5ccc00;    
-    }  
-    nav {
-      background-color: #22cc00;
-      grid-area: navTag;
-    }  
-    #video {
-      background-color: #ad48ff;
-      grid-area: videoTag;
-    }
+    
     .selectednav{
         background-color: #2bff00;
     }
@@ -550,34 +589,37 @@ a {
         width: 50%;
         float: right;
         position: relative;
-        top: 10px;
+        top: 10px;        
     }
     #articleOostenrijk .articletext {
         width: 50%;
         float: right;
         position: relative;
-        top: 25px;
+        top: 25px;        
     }
     #articleDuitsland .articletext {
         width: 50%;
         float: right;
         position: relative;
-        top: 10px;
+        top: 10px;        
     }
     #articlestelvio {
         background-color: #003af7;
         grid-area: stelvioTag;
         height: 300px;
+        order: 8;
     }
     #articleOostenrijk {
         background-color: #d0ff00;
         grid-area: oostenrijkTag;
         height: 300px;
+        order: 7;
     }
     #articleDuitsland {
         background-color: #ff08b5;
         grid-area: duitslandTag;
         height: 300px;
+        order: 6;
     }
     .articlefoto {
         width: 400px;
@@ -592,23 +634,19 @@ a {
         position: relative;
         left: 230px;
     }
+    #articleOostenrijk img{
+        width: 400px;
+        float: left;
+        clear: both;
+        position: relative;
+        top: -146px;
+    }
     figure>figcaption {
         float: right;
         position: relative;
         clear: both;
         bottom: 100px;
-    }
-    #grid-container {
-        grid-template-areas:
-            'headerTag  headerTag   headerTag'
-            'navTag     navTag      navTag'
-            'asidetag   asideTag    asideTag'
-            'videoTag   videoTag    videoTag'
-            'duitslandTag duitslandTag  duitslandTag'
-            'oostenrijkTag oostenrijkTag  oostenrijkTag'
-            'stelvioTag stelvioTag  stelvioTag'
-            'footerTag  footerTag   cookieTag';
-    }    
+    }       
 
 
     /*best dest */
@@ -837,6 +875,12 @@ a {
 
 /*mobile max-device-widht heb ik gebruikt omdat het anders niet werkte (Ik weet dat dit verouderd is)*/
 @media screen and (max-device-width: 480px) {
+    .flexbox{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;   
+        justify-content: flex-start;          
+    }
     .coockiemessage{
         display: none;
     }
@@ -872,26 +916,22 @@ a {
     /* Index en algemeen */
     body{
         font-family: Arial, Helvetica, sans-serif;
-    }
-    #grid-container {
-        grid-template-areas:
-            'headerTag  headerTag   navTag'
-            'asidetag   asideTag    asideTag'            
-            'duitslandTag duitslandTag  duitslandTag'
-            'oostenrijkTag oostenrijkTag  oostenrijkTag'
-            'stelvioTag stelvioTag  stelvioTag'
-            'footerTag  footerTag   cookieTag';
-    }    
+    }        
     #asideHome {
         background-color: #ff0000;
         width: 30em;
         padding: 50px;
         float: left;
         grid-area: asideTag;
+        order: 3;
+        height: 300px;
+        font-size: 40px;
     }    
     #footer {
         background-color: #ff9204;
         grid-area: footerTag;
+        order: 7;
+        flex-basis: 100%;
     }    
     #cookieStatement {
         background-color: #ff6600;
@@ -904,18 +944,26 @@ a {
         opacity: 50%;
     }    
     #logo {
-        width: 100px;
+        display: none;
     }    
     article {
         padding: 30px;
+        font-size: 30px;
     }
     #Homeheader{
       background-color: #5ccc00;
-      width: 100%;    
+      width: 100%;   
+      order: 1; 
+      flex-basis: 70%;
+      height: 100px;
+      text-align: center;
+      padding-top: 50px;
     }  
     nav {
       background-color: #22cc00;
       grid-area: navTag;
+      order: 2;
+      flex-basis: 30%;
     }  
     #video {
       background-color: #ad48ff;
@@ -932,21 +980,34 @@ a {
     #articlestelvio {
         background-color: #003af7;
         grid-area: stelvioTag;
+        order: 6;
+        height: 600px;
     }
     #articleOostenrijk {
         background-color: #d0ff00;
         grid-area: oostenrijkTag;
+        order: 5;
+        height: 750px;
     }
     #articleDuitsland {
         background-color: #ff08b5;
         grid-area: duitslandTag;
+        order: 4;
+        height: 600px;
     }
     .articlefoto {
         width: 400px;
         float: left;
         clear: both;
         position: relative;
-        top: -199px;
+        top: -445px;
+    }
+    #articleOostenrijk img{
+        width: 400px;
+        float: left;
+        clear: both;
+        position: relative;
+        top: -549px;
     }
     video{
         width: 500px;
