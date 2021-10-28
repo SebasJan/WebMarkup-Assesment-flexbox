@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="nl">
+<meta charset="utf-8" />
+<meta name="author" content="Sebastiaan van Vliet">
+<!-- Head [webmarkup assesment] [] -->
+		<title>Road trips</title>	
+		<link rel="icon" alt="Klein plaatje van een auto" title="faviconlogo"  href="img/favicon.png" type="image/x-icon"/>
+		<link rel= "stylesheet" type= "text/css" href= "css/stylesheet.css" />
+		<!-- font notable -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Notable&display=swap" rel="stylesheet">	
+		<!--  -->		
+	</head>	
+			
+<body>
+	<section id="grid-container-contact">
+	<header id="Homeheader">
+		<img src="img/logo.png" id="logo" alt="Logo van roadtrip" title="logo van de website">
+		<h1>RoadTrips</h1>
+		<h2>"The best trips for on the road."</h2>	
+	</header>
+	
+	<nav id="hamburgernavigation">
+		<label for="hamburger">&#9776;</label>
+        <input type="checkbox" id="hamburger" />
+        <section id="itemshamnav">
+			<a href="index.html">Home</a>
+			<a href="bestdestinations.html">Best destionations</a>
+            <a href="tickets.html">Tickets</a>
+            <a class="selectednav" href="contact.html">Contact</a>
+		</section>
+	</nav>
+
+	<fieldset id="contactform">
+			<legend>Contact by email:</legend>
+			
+			<h2>Please select the topic you would like to contact us about. So, we can serve you better and faster. </h2>
+			<p>Where is your question about?</p>
+			<label>Make a choice</label>
+				<select id="question">
+					<option value="..">...</option>
+					<option value="destination">I have a question regarding one of the destinations</option>
+					<option value="computer info">I have a question regarding ordering tickets</option>
+					<option value="different">I have another question</option>
+				</select>
+					
+			<h2>Your question:</h2>
+			<form autocomplete="on">
+				<label for="question">Your question:</label><br>
+					<input type="text" id="message" required name="message" maxLength="500" placeholder="Your question here">
+					<p>max of 500 characters.</p>
+				<label for="file*">Add an attachment? (optional)</label><br>
+					<input type="file" id="file" name="file"><br><br>
+					
+			<h2>Your information:</h2>
+				<label>First and last name*:</label><br>
+					<input type="text" id="name" required name="name"><br><br>
+				<label>Phone number</label><br>
+					<input type="text" id="phone" name="phone" placeholder="0612345678">
+					<p>More than 80% of our customers share their phone number, so we can help you better.</p><br>
+				<label>E-mail address*</label><br>
+					<input type="email" id="email" name="email" required  placeholder="Something@something.whatever"><br><br>
+				<input type="submit" value="submit">
+			</form>
+		</fieldset>
+			
+	<aside id="asidecontact">
+		<h3>3 mooiste routes:</h3>		
+		<a href="https://www.anwb.nl/vakantie/inspiratie/de-mooiste-plekken-in-de-alpen" target="blank">
+			<img src="img/stelvio.png" id="asideticketsimage1" alt="Foto van Stelviopas" title="stelviofoto"/>
+		</a>
+		<a href="https://www.anwb.nl/vakantie/inspiratie/de-mooiste-plekken-in-de-alpen" target="blank">
+			<img src="img/oostenrijk.png" id="asideticketsimage2" alt="foto van weg in oostenrijk" title="oostenrijkfoto"/>
+		</a>
+		<a href="https://www.anwb.nl/vakantie/duitsland/beieren/bezienswaardigheden" target="blank">
+			<img src="img/strasse.png" id="asideticketsimage3" alt="Foto van kasteel in duitsland" title="strassefoto"/>
+		</a>
+	</aside>
+		
+	<footer id="footer">&copy; Sebastiaan van Vliet</footer>
+		
+	<section id="cookieStatement">
+		Cookie statement
+    </section>
+	
+</section>	
+
+</body>
+</html>
