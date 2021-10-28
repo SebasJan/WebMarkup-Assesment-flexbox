@@ -2,9 +2,13 @@
 <html lang="nl">
 <meta charset="utf-8" />
 <meta name="author" content="Sebastiaan van Vliet">
+<meta name="description" content="Dit is een website waar mensen die intresse hebben in roadtrips heen kunnen gaan. 
+Hier krijgen ze de mooiste reis bestemmingen te zien met de mooiste wegen en omgeving. Ook kan je hier terecht voor tickets en prijzen naar landen. 
+Ook is er een mogenlijkheid om contact met ons op te nemen om zo je veder te helpen naar die ene geweldige roadtrip.">
+<meta name="keywords" content="roadtrips, webmarkup, reizen, bestemmingen, omgeving">
 <!-- Head [webmarkup assesment] [] -->
 		<title>Road trips</title>	
-		<link rel="icon" alt="Klein plaatje van een auto" title="faviconlogo"  href="img/favicon.png" type="image/x-icon"/>
+		<link rel="icon" title="faviconlogo"  href="img/favicon.png" type="image/x-icon"/>
 		<link rel= "stylesheet" type= "text/css" href= "css/stylesheet.css" />
 		<!-- font notable -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -47,20 +51,20 @@
 					
 			<h2>Your question:</h2>
 			<form autocomplete="on">
-				<label for="question">Your question:</label><br>
+				<label for="question">Your question:</label>
 					<input type="text" id="message" required name="message" maxLength="500" placeholder="Your question here">
 					<p>max of 500 characters.</p>
-				<label for="file*">Add an attachment? (optional)</label><br>
-					<input type="file" id="file" name="file"><br><br>
+				<label>Add an attachment? (optional)</label>
+					<input type="file" id="file" name="file">
 					
 			<h2>Your information:</h2>
-				<label>First and last name*:</label><br>
-					<input type="text" id="name" required name="name"><br><br>
-				<label>Phone number</label><br>
+				<label>First and last name*:</label>
+					<input type="text" id="name" required name="name">
+				<label>Phone number</label>
 					<input type="text" id="phone" name="phone" placeholder="0612345678">
-					<p>More than 80% of our customers share their phone number, so we can help you better.</p><br>
-				<label>E-mail address*</label><br>
-					<input type="email" id="email" name="email" required  placeholder="Something@something.whatever"><br><br>
+					<p>More than 80% of our customers share their phone number, so we can help you better.</p>
+				<label>E-mail address*</label>
+					<input type="email" id="email" name="email" required  placeholder="Something@something.whatever">
 				<input type="submit" value="submit">
 			</form>
 		</fieldset>

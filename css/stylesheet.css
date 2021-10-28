@@ -128,6 +128,9 @@ a {
 /*  */
 
     /* Index en algemeen */   
+    #bodyindex{
+        background-color: #ff0000;
+    }
     /*Hamburger Pc and tablet*/
     #hamburgernavigation {
     width: 100%;
@@ -152,6 +155,7 @@ a {
     display: none; 
     }
     /* */
+
     .moreinfo:link{
         color: #51ff00;
     }
@@ -167,7 +171,6 @@ a {
     body{
         font-family: Arial, Helvetica, sans-serif;
     }
-
 
     #Homeheader{
         background-color: #5ccc00;
@@ -210,17 +213,18 @@ a {
         order: 8;     
     } 
     #cookieStatement {
-        background-color: #003cff;
+        color: white;        
         grid-area: cookieTag;
         position: fixed;
         right: 0;
         bottom: 0;
         width: 8vw;
-        color: rgb(14, 0, 0);
+        background-color: #FA0;
         opacity: 50%;
         flex-basis: 100%;
         flex-grow: 1;
         flex-shrink: 1; 
+        z-index: 999;
     }    
     #logo {
         width: 100px;
@@ -443,6 +447,7 @@ nav + article{
     padding: 89px;
     height: 100vh;
     word-spacing: 2px;
+    line-height: 40px;
 }
 fieldset{        
     border-radius: 10px;
@@ -687,6 +692,7 @@ a {
         bottom: 0;
         width: 100px;
         grid-area: coockieTag;
+        background-color: #FA0;
     }
     #destination1{
         grid-area: destination1Tag;
@@ -862,6 +868,7 @@ a {
         grid-area: contactTag;
         padding: 49px;
         height: 100vh;
+        line-height: 40px;
     }
     #message{
         width: 500px;
@@ -888,9 +895,8 @@ a {
 	#itemshamnav a {
 		box-sizing: border-box;
 		display: block;
-		width: 50%;
-		border-top: 1px solid #333;
-        
+		width: 141px;
+		border-top: 1px solid #333;        
 	}
   
 	#hamburgernavigation label { 
@@ -898,14 +904,17 @@ a {
 		color: white;
 		background: #00f2fa;
 		font-style: normal;
-		font-size: 1.2em;
-		padding: 10px;
-        width: 50%;
+		font-size: 3em;
+		padding: 20px;
+        width: 50px;
 	}    
-
+    #hamburgernavigation {
+        width: 100%;
+        background: #20a095;  
+        } 
 	#itemshamnav { 
 		display: none; 
-        background: #a02620;
+        background: #20a095;
 	}
 	
 	#hamburgernavigation input:checked ~ #itemshamnav { 
@@ -1070,12 +1079,12 @@ a {
     #destination1{
         grid-area: destination1Tag;
         background-color: #8381ff;
-        height: 300px;
+        height: 324px;
     }
     #destination2{
         grid-area: destination2Tag;
         background-color: #90ff81;
-        height: 300px;
+        height: 319px;
     }
     #destination3{
         grid-area: destination3Tag;
@@ -1090,7 +1099,7 @@ a {
     #destination5{
         grid-area: destination5Tag;
         background-color: #81fff5;
-        height: 300px;
+        height: 349px;
     }
     #destination6{        
         display: none;
@@ -1267,6 +1276,8 @@ a {
         grid-area: contactTag;
         padding: 46px;        
         height: 70vh;
+        font-size: 30px;
+        line-height: 50px;
     }
     #message{
         width: 500px;
